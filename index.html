@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title><!-- TODO: Site Title -->Mulberry Pressure Washing | Exterior Cleaning in Mulberry, GA</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="<!-- TODO: Google description -->Professional pressure washing and soft washing in Mulberry, GA. House washing, driveway cleaning, gutters & more." />
+
+  <style>
+    /* ---------- GLOBAL ---------- */
+    :root {
+      --bg-dark: #020617;
+      --bg-section: #f8fafc;
+      --accent: #22c55e;
+      --accent-soft: #bbf7d0;
+      --text-main: #0f172a;
+      --text-muted: #6b7280;
+      --border-subtle: #e5e7eb;
+      --radius-lg: 0.75rem;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui,-apple-system,Segoe UI,sans-serif;
+      color: var(--text-main);
+      background: white;
+      line-height: 1.6;
+    }
+    img { max-width: 100%; display: block; }
+
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 1.25rem; }
+
+    /* ---------- HEADER ---------- */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(2,6,23,0.96);
+      backdrop-filter: blur(12px);
+      color: white; border-bottom: 1px solid rgba(148,163,184,0.4);
+    }
+    .nav { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; }
+    .logo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; }
+    .logo-icon {
+      width: 32px; height: 32px; border-radius: 99px;
+      background: linear-gradient(135deg,#22c55e,#0ea5e9);
+      display:flex; align-items:center; justify-content:center;
+      color:white; font-weight:700;
+    }
+    .nav-links { display:flex; gap:1.5rem; }
+    .nav-phone { font-size: 0.9rem; }
+
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:0.6rem 1.2rem; border-radius:999px;
+      font-weight:600; cursor:pointer; text-decoration:none;
+    }
+    .btn-primary { background:var(--accent); color:#022c22; }
+    .btn-outline { border:1px solid #cbd5e1; color:#e5e7eb; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      background: radial-gradient(circle at top left,#1e293b 0,#020617 40%,#020617 100%);
+      color:white; padding:3.5rem 0 3rem;
+    }
+    .hero-grid { display:grid; gap:2.5rem; }
+    @media(min-width:900px){ .hero-grid{ grid-template-columns:1.2fr 1fr; } }
+
+    /* ---------- SECTIONS ---------- */
+    section { padding:3rem 0; }
+    .section-light { background:white; }
+    .section-muted { background:#f8fafc; }
+
+    .grid { display:grid; gap:1.5rem; }
+    @media(min-width:900px){ .grid-3 { grid-template-columns: repeat(3,1fr); } }
+
+    .card {
+      border:1px solid #e5e7eb; border-radius:0.75rem;
+      padding:1.25rem; background:white;
+    }
+
+    /* GALLERY */
+    .gallery-grid { display:grid; gap:1rem; }
+    @media(min-width:768px){
+      .gallery-grid { grid-template-columns: repeat(4,1fr); }
+    }
+    .gallery-item { border:1px solid #e5e7eb; border-radius:0.75rem; overflow:hidden; background:#e5e7eb; }
+
+    /* CONTACT FORM */
+    .contact-grid { display:grid; gap:2rem; }
+    @media(min-width:900px){ .contact-grid { grid-template-columns:1.2fr 1fr; } }
+
+    footer {
+      background:#020617; color:#9ca3af;
+      padding:1.5rem 0; font-size:0.8rem; text-align:center;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <nav class="nav">
+
+      <div class="logo">
+        <div class="logo-icon">MW</div> <!-- TODO: Replace "MW" -->
+        <div>
+          <div><!-- TODO: Business name -->Mulberry Pressure Washing</div>
+        </div>
+      </div>
+
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#quote">Quote</a>
+      </div>
+
+      <div class="nav-phone">
+        Call/Text:
+        <a href="tel:YOUR_PHONE_NUMBER"><!-- TODO -->YOUR_PHONE_NUMBER</a>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1><!-- TODO -->Professional Pressure Washing in Mulberry, GA</h1>
+      <p>Safe soft washing + pressure washing for homes, driveways & more.</p>
+
+      <a href="tel:YOUR_PHONE_NUMBER" class="btn btn-primary">Call Now</a>
+      <a href="#quote" class="btn btn-outline">Get Free Quote</a>
+
+      <p>Prefer to text? <strong>YOUR_PHONE_NUMBER</strong></p> <!-- TODO -->
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section-light">
+  <div class="container">
+
+    <h2>Our Services</h2>
+
+    <div class="grid grid-3">
+
+      <div class="card">
+        <h3>House Washing</h3>
+        <p>Soft wash siding cleaning (safe for vinyl, brick, stucco).</p>
+      </div>
+
+      <div class="card">
+        <h3>Driveway Cleaning</h3>
+        <p>Concrete cleaning for stains, mildew & years of buildup.</p>
+      </div>
+
+      <div class="card">
+        <h3>Gutter Cleaning</h3>
+        <p>Clearing clogs + downspout flushing for proper drainage.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section-muted">
+  <div class="container">
+
+    <h2>Before & After Gallery</h2>
+
+    <div class="gallery-grid">
+
+      <!-- TODO: Replace image paths with your actual filenames -->
+      <div class="gallery-item">
+        <img src="images/house-before-1.jpg" alt="Before">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/house-after-1.jpg" alt="After">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/driveway-before-1.jpg" alt="Before">
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/driveway-after-1.jpg" alt="After">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="quote" class="section-light">
+  <div class="container contact-grid">
+
+    <div>
+      <h2>Request a Free Quote</h2>
+
+      <form>
+        <label>Name</label>
+        <input type="text" placeholder="Your name">
+
+        <label>Phone</label>
+        <input type="text" placeholder="Your phone number">
+
+        <label>Email</label>
+        <input type="email" placeholder="YOUR_EMAIL_ADDRESS"> <!-- TODO -->
+
+        <label>Address</label>
+        <input type="text" placeholder="Street, city">
+
+        <label>What do you need cleaned?</label>
+        <select>
+          <option>House Wash</option>
+          <option>Driveway</option>
+          <option>Gutters</option>
+          <option>Fence/Deck</option>
+          <option>Whole Property</option>
+        </select>
+
+        <button class="btn btn-primary">Send Quote</button>
+      </form>
+    </div>
+
+    <div>
+      <h3>Contact Info</h3>
+      <p><strong>Call/Text:</strong> YOUR_PHONE_NUMBER</p> <!-- TODO -->
+      <p><strong>Email:</strong> YOUR_EMAIL_ADDRESS</p> <!-- TODO -->
+      <p>Serving: Mulberry, Dacula, Braselton, Auburn, Buford</p> <!-- TODO -->
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  &copy; <span id="year"></span>
+  <!-- TODO: Business name -->Mulberry Pressure Washing.
+  Built by <!-- TODO -->Mulberry Pressure Washing.
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
