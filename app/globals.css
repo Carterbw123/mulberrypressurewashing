@@ -71,15 +71,21 @@ header {
   font-weight: 700;
 }
 .logo-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 99px;
-  background: linear-gradient(135deg, #0ea5e9, #14b8a6);
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  padding: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-weight: 700;
+  overflow: hidden;
+}
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .nav-links {
   display: flex;
@@ -485,6 +491,12 @@ footer {
 .pp__heading {
   margin: 28px 0 10px;
   font-size: 1.25rem;
+}
+
+.pp__subheading {
+  margin: 18px 0 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
 }
 
 .pp__list {

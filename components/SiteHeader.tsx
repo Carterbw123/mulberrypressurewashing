@@ -30,9 +30,14 @@ export function SiteHeader() {
       <div className="container">
         <nav className="nav" aria-label="Primary">
           <Link className="logo" href="/" aria-label="Mulberry Pressure Washing">
-            <div className="logo-icon" aria-hidden="true">
-              MPW
-            </div>
+            <span className="logo-icon" aria-hidden="true">
+              <img
+                className="logo-img"
+                src="/images/mpw-logo.png"
+                alt=""
+                decoding="async"
+              />
+            </span>
             <div>
               <div>Mulberry Pressure Washing</div>
             </div>
