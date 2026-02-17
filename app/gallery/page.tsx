@@ -1,5 +1,8 @@
 import Link from "next/link";
-import { LightboxGallery, type GalleryImage } from "../../components/LightboxGallery";
+import {
+  LightboxGallery,
+  type GalleryImage,
+} from "../../components/LightboxGallery";
 import { ScrollReveal } from "../../components/ScrollReveal";
 
 const images: GalleryImage[] = [
@@ -29,9 +32,6 @@ export default function GalleryPage() {
       <section className="section-muted">
         <div className="container">
           <h2 className="fade-up">Before &amp; After Gallery</h2>
-          <p className="section-subtitle fade-up">
-            Tap an image to zoom. (We can expand this with more jobs/photos anytime.)
-          </p>
 
           <LightboxGallery images={images} />
 
@@ -45,4 +45,3 @@ export default function GalleryPage() {
     </>
   );
 }
-

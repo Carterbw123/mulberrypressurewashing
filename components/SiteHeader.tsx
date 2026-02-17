@@ -26,7 +26,7 @@ export function SiteHeader() {
   );
 
   return (
-    <header>
+    <header className="site-header">
       <div className="container">
         <nav className="nav" aria-label="Primary">
           <Link className="logo" href="/" aria-label="Mulberry Pressure Washing">

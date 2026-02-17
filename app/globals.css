@@ -1,4 +1,4 @@
-/* Mulberry Pressure Washing - Global styles (ported from index.html) */
+/* Mulberry Pressure Washing - Global styles */
 :root {
   --bg-dark: #020617;
   --bg-section: #f8fafc;
@@ -49,10 +49,11 @@ a {
 }
 
 /* ---------- HEADER ---------- */
-header {
+.site-header {
   position: sticky;
   top: 0;
-  z-index: 50;
+  /* Keep mobile nav above page content */
+  z-index: 1000;
   background: rgba(2, 6, 23, 0.96);
   backdrop-filter: blur(12px);
   color: white;
@@ -74,18 +75,21 @@ header {
   width: 54px;
   height: 54px;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.08);
+  /* White backdrop so the logo doesn't look like a "sticker" */
+  background: #fff;
   border: 1px solid rgba(148, 163, 184, 0.35);
-  padding: 4px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.18);
 }
 .logo-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: inherit;
 }
 .nav-links {
   display: flex;
@@ -153,6 +157,7 @@ header {
   top: 60px;
   left: 0;
   right: 0;
+  z-index: 1100;
   background: rgba(2, 6, 23, 0.98);
   border-bottom: 1px solid rgba(148, 163, 184, 0.2);
 }
@@ -314,6 +319,31 @@ h1 {
   cursor: zoom-in;
   transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
+.gallery-item :where(img, picture) {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.gallery-item :where(span) {
+  /* next/image may wrap the <img>; ensure wrapper fills the tile */
+  display: block;
+  width: 100%;
+}
+
+/* If the browser supports aspect-ratio, crop consistently without distortion. */
+@supports (aspect-ratio: 1 / 1) {
+  .gallery-item {
+    /* Prevent iPhone Safari “squish” by defining a stable tile box */
+    aspect-ratio: 1 / 1;
+  }
+  .gallery-item :where(img, picture) {
+    height: 100%;
+    object-fit: cover;
+  }
+  .gallery-item :where(span) {
+    height: 100%;
+  }
+}
 .gallery-item:hover {
   transform: translateY(-2px);
   border-color: #cbd5e1;
@@ -326,14 +356,19 @@ h1 {
   display: none;
   align-items: center;
   justify-content: center;
-  z-index: 100;
+  /* Above sticky header + mobile menu */
+  z-index: 3000;
   padding: 2rem;
 }
 .lightbox.open {
   display: flex;
 }
 .lightbox img {
+  max-width: 92vw;
   max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 30px 60px rgba(2, 6, 23, 0.4);
 }
