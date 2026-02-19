@@ -725,6 +725,11 @@ textarea:focus {
   font-size: 0.9375rem;
   color: var(--text-main);
 }
+.form-hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
 .form-status--error {
   color: var(--error, #b91c1c);
 }

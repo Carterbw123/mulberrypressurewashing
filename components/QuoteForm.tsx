@@ -11,6 +11,8 @@ export function QuoteForm() {
     error: string | null;
   }>({ submitting: false, submitted: false, error: null });
 
+  const [services, setServices] = useState<string[]>([]);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -32,6 +34,7 @@ export function QuoteForm() {
       if (response.ok && (data.ok ?? true)) {
         setStatus({ submitting: false, submitted: true, error: null });
         form.reset();
+        setServices([]);
       } else {
         const msg =
           Array.isArray(data.errors) && data.errors.length > 0
@@ -116,15 +119,33 @@ export function QuoteForm() {
       <div className="form-row form-row-2">
         <div>
           <label htmlFor="service">What do you need cleaned?</label>
-          <select id="service" name="service" required>
-            <option>House Wash</option>
-            <option>Window Cleaning</option>
-            <option>Solar Panel Cleaning</option>
-            <option>Driveway</option>
-            <option>Gutters</option>
-            <option>Fence/Deck</option>
-            <option>Whole Property</option>
+          <select
+            id="service"
+            name="service"
+            multiple
+            size={7}
+            required
+            aria-describedby="service-hint"
+            value={services}
+            onChange={(e) => {
+              const next = Array.from(e.currentTarget.selectedOptions).map(
+                (opt) => opt.value,
+              );
+              setServices(next);
+            }}
+          >
+            <option value="House Wash">House Wash</option>
+            <option value="Window Cleaning">Window Cleaning</option>
+            <option value="Solar Panel Cleaning">Solar Panel Cleaning</option>
+            <option value="Driveway">Driveway</option>
+            <option value="Gutters">Gutters</option>
+            <option value="Fence/Deck">Fence/Deck</option>
+            <option value="Whole Property">Whole Property</option>
           </select>
+          <p className="form-hint" id="service-hint">
+            Select all that apply (hold ⌘ on Mac or Ctrl on Windows to choose
+            multiple).
+          </p>
         </div>
         <div>
           <label htmlFor="timeline">Timeline</label>
