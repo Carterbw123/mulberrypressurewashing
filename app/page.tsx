@@ -4,7 +4,7 @@ import {
   LightboxGallery,
   type GalleryImage,
 } from "../components/LightboxGallery";
-
+// import ContactForm from "../components/ContactForm";
 const homeGalleryImages: GalleryImage[] = [
   {
     src: "/images/BlackGreyBrownBeautyHairBeforeAfterCollageInstagramPost10.png",
@@ -32,7 +32,9 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-grid">
           <div>
-            <h1 className="fade-up">Professional Pressure Washing in Mulberry, GA</h1>
+            <h1 className="fade-up">
+              Professional Pressure Washing in Mulberry, GA
+            </h1>
             <p className="lead fade-up">
               Safe soft washing + pressure washing for homes, driveways & more.
             </p>
@@ -100,11 +102,14 @@ export default function Home() {
         </div>
       </div>
 
+      {/* <ContactForm /> */}
       <section className="section-light">
         <div className="container">
           <div className="page-header">
             <h2 className="fade-up">Our Services</h2>
-            <p className="section-subtitle fade-up">Gentle on materials, tough on grime.</p>
+            <p className="section-subtitle fade-up">
+              Gentle on materials, tough on grime.
+            </p>
           </div>
 
           <div className="grid grid-3">
@@ -121,7 +126,10 @@ export default function Home() {
                 </svg>
               </div>
               <h3>House Washing</h3>
-              <p>Soft wash siding cleaning safe for vinyl, brick, stucco, and more.</p>
+              <p>
+                Soft wash siding cleaning safe for vinyl, brick, stucco, and
+                more.
+              </p>
             </div>
 
             <div className="card fade-up">
@@ -137,7 +145,10 @@ export default function Home() {
                 </svg>
               </div>
               <h3>Window Cleaning</h3>
-              <p>Clean windows to let in the natural light and see the beauty of your home.</p>
+              <p>
+                Clean windows to let in the natural light and see the beauty of
+                your home.
+              </p>
             </div>
 
             <div className="card fade-up">
@@ -153,7 +164,10 @@ export default function Home() {
                 </svg>
               </div>
               <h3>Solar Panel Cleaning</h3>
-              <p>Clean solar panels to maximize energy production and reduce energy bills.</p>
+              <p>
+                Clean solar panels to maximize energy production and reduce
+                energy bills.
+              </p>
             </div>
 
             <div className="card fade-up">
@@ -168,7 +182,10 @@ export default function Home() {
                 </svg>
               </div>
               <h3>Driveway Cleaning</h3>
-              <p>Remove stains, mildew, and years of buildup from concrete and pavers.</p>
+              <p>
+                Remove stains, mildew, and years of buildup from concrete and
+                pavers.
+              </p>
             </div>
 
             <div className="card fade-up">
@@ -189,7 +206,9 @@ export default function Home() {
                 </svg>
               </div>
               <h3>Gutter Cleaning</h3>
-              <p>Clear clogs and flush downspouts for proper, reliable drainage.</p>
+              <p>
+                Clear clogs and flush downspouts for proper, reliable drainage.
+              </p>
             </div>
           </div>
 

@@ -1,5 +1,7 @@
 /* Mulberry Pressure Washing - Global styles (light premium design system) */
 :root {
+  color-scheme: light;
+
   /* Brand */
   --brand-600: #0284c7;
   --brand-500: #0ea5e9;
@@ -43,6 +45,56 @@
   --space-stack: 1rem;
   --space-stack-lg: 1.5rem;
   --space-stack-xl: 2rem;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Surfaces */
+  --surface: #0b1220;
+  --surface-muted: #0f172a;
+  --surface-dark: #020617;
+  --bg-dark: #020617;
+
+  /* Text */
+  --text-main: #e5e7eb;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-on-dark: #e5e7eb;
+
+  /* Border */
+  --border-subtle: #1f2937;
+  --border-default: #334155;
+
+  /* Shadows (subtler on dark) */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 14px 36px rgba(0, 0, 0, 0.45);
+  --shadow-xl: 0 22px 48px rgba(0, 0, 0, 0.5);
+
+  /* Brand tints for dark backgrounds */
+  --brand-50: rgba(14, 165, 233, 0.12);
+  --brand-200: rgba(56, 189, 248, 0.35);
+
+  /* Focus ring (a11y) */
+  --ring: 0 0 0 3px rgba(56, 189, 248, 0.25);
+}
+
+/* Sticky header was hard-coded to white */
+html[data-theme="dark"] .site-header {
+  background: rgba(11, 18, 32, 0.92);
+}
+
+/* Service icon variants had fixed light tints */
+html[data-theme="dark"] .icon--sky {
+  background: rgba(14, 165, 233, 0.14);
+  border-color: rgba(56, 189, 248, 0.35);
+  color: #38bdf8;
+}
+html[data-theme="dark"] .icon--green {
+  background: rgba(34, 197, 94, 0.14);
+  border-color: rgba(134, 239, 172, 0.35);
+  color: #22c55e;
 }
 
 * {
@@ -186,6 +238,11 @@ a {
   align-items: center;
   padding: 0.75rem 0;
 }
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
 .logo {
   display: flex;
   align-items: center;
@@ -309,6 +366,31 @@ a {
   border-color: var(--border-default);
 }
 .hamburger:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+}
+.theme-toggle {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  background: var(--surface);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease,
+    transform 0.12s ease;
+}
+.theme-toggle:hover {
+  border-color: var(--border-default);
+  background: var(--surface-muted);
+}
+.theme-toggle:active {
+  transform: translateY(1px);
+}
+.theme-toggle:focus-visible {
   outline: none;
   box-shadow: var(--ring);
 }
@@ -638,6 +720,14 @@ textarea:focus {
     grid-template-columns: 1fr 1fr;
   }
 }
+.form-status {
+  margin: 0.5rem 0 0;
+  font-size: 0.9375rem;
+  color: var(--text-main);
+}
+.form-status--error {
+  color: var(--error, #b91c1c);
+}
 
 /* Subtle reveal animation */
 .fade-up {
@@ -675,12 +765,12 @@ footer {
   font-weight: 600;
 }
 .footer a {
-  color: var(--border-default);
+  color: var(--text-on-dark);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 .footer a:hover {
-  color: var(--surface);
+  color: var(--text-on-brand);
 }
 .footer a:focus-visible {
   outline: none;
@@ -707,7 +797,7 @@ footer {
 }
 .footer-tagline {
   margin-top: 0.5rem;
-  color: var(--border-default);
+  color: var(--text-muted);
   font-size: 0.875rem;
   line-height: 1.5;
 }

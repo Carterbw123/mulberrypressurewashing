@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useMemo, useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const PHONE_TEL = "tel:7703310490";
 const PHONE_LABEL = "Call/Text: (770) 331-0490";
@@ -46,47 +47,51 @@ export function SiteHeader() {
             </div>
           </Link>
 
-          <div className="nav-links">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="nav-link"
-                aria-current={isActivePath(pathname, item.href) ? "page" : undefined}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
+          <div className="nav-actions">
+            <div className="nav-links">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="nav-link"
+                  aria-current={isActivePath(pathname, item.href) ? "page" : undefined}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
 
-          <div className="nav-phone">
-            <a className="btn btn-primary" href={PHONE_TEL}>
-              {PHONE_LABEL}
-            </a>
-          </div>
+            <ThemeToggle />
 
-          <button
-            className="hamburger"
-            aria-label={isOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isOpen ? "true" : "false"}
-            onClick={() => setIsOpen((v) => !v)}
-            type="button"
-          >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
+            <div className="nav-phone">
+              <a className="btn btn-primary" href={PHONE_TEL}>
+                {PHONE_LABEL}
+              </a>
+            </div>
+
+            <button
+              className="hamburger"
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen ? "true" : "false"}
+              onClick={() => setIsOpen((v) => !v)}
+              type="button"
             >
-              <path
-                d="M4 6h16M4 12h16M4 18h16"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
-          </button>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 6h16M4 12h16M4 18h16"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
+          </div>
         </nav>
 
         <div
