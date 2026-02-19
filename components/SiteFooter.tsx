@@ -18,7 +18,7 @@ export function SiteFooter() {
             </span>
             <div>Mulberry Pressure Washing</div>
           </div>
-          <p style={{ marginTop: "0.5rem", color: "#cbd5e1" }}>
+          <p className="footer-tagline">
             Professional pressure and soft washing across Mulberry and nearby areas.
           </p>
           <div className="socials">
@@ -85,20 +85,11 @@ export function SiteFooter() {
         </div>
       </div>
 
-      <div style={{ marginTop: "1rem", color: "#9ca3af", textAlign: "center" }}>
+      <div className="footer-legal">
         <div>&copy; {year} Mulberry Pressure Washing.</div>
-        <div
-          style={{
-            marginTop: "0.35rem",
-            display: "flex",
-            justifyContent: "center",
-            gap: "0.6rem",
-            flexWrap: "wrap",
-          }}
-          aria-label="Legal links"
-        >
+        <div className="footer-legal-links" aria-label="Legal links">
           <Link href="/privacy-policy">Privacy Policy</Link>
-          <span aria-hidden="true" style={{ color: "#6b7280" }}>
+          <span className="divider" aria-hidden="true">
             |
           </span>
           <Link href="/terms-of-service">Terms of Service</Link>

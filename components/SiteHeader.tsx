@@ -27,6 +27,9 @@ export function SiteHeader() {
 
   return (
     <header className="site-header">
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
       <div className="container">
         <nav className="nav" aria-label="Primary">
           <Link className="logo" href="/" aria-label="Mulberry Pressure Washing">
@@ -48,6 +51,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
+                className="nav-link"
                 aria-current={isActivePath(pathname, item.href) ? "page" : undefined}
               >
                 {item.label}
@@ -94,6 +98,8 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
+              className="nav-link"
+              aria-current={isActivePath(pathname, item.href) ? "page" : undefined}
               onClick={() => setIsOpen(false)}
             >
               {item.label}

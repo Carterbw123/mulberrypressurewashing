@@ -4,7 +4,7 @@ const LAST_UPDATED = "February 2026";
 
 export default function TermsOfService() {
   return (
-    <main className="pp">
+    <article className="pp">
       <header className="pp__header">
         <h1 className="pp__title">Terms of Service</h1>
         <p className="pp__subtitle">Mulberry Pressure Washing</p>
@@ -128,14 +128,14 @@ export default function TermsOfService() {
           <strong className="pp__contactTitle">Mulberry Pressure Washing</strong>
 
           <div className="pp__contactRow">
-            <span aria-hidden="true">📞</span>{" "}
+            <span className="pp__label">Phone:</span>
             <a className="pp__link" href="tel:7703310490">
               770-331-0490
             </a>
           </div>
 
           <div className="pp__contactRow">
-            <span aria-hidden="true">📧</span>{" "}
+            <span className="pp__label">Email:</span>
             <a className="pp__link" href="mailto:themulberrypressurewashing@gmail.com">
               themulberrypressurewashing@gmail.com
             </a>
@@ -148,7 +148,7 @@ export default function TermsOfService() {
         <h3 className="pp__subheading">Age Restriction (18+)</h3>
         <p>You must be at least eighteen (18) years of age to opt in to receive SMS text messages.</p>
       </section>
-    </main>
+    </article>
   );
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PrivacyPolicy() {
   return (
-    <main className="pp">
+    <article className="pp">
       <header className="pp__header">
         <h1 className="pp__title">Privacy Policy</h1>
         <p className="pp__subtitle">Mulberry Pressure Washing</p>
@@ -138,7 +138,7 @@ export default function PrivacyPolicy() {
           <strong className="pp__contactTitle">Mulberry Pressure Washing</strong>
 
           <div className="pp__contactRow">
-            <span aria-hidden="true">📞</span>{" "}
+            <span className="pp__label">Phone:</span>
             <a className="pp__link" href="tel:7703310490">
               770-331-0490
             </a>
@@ -151,7 +151,7 @@ export default function PrivacyPolicy() {
           </div>
 
           <div className="pp__contactRow">
-            <span aria-hidden="true">📧</span>{" "}
+            <span className="pp__label">Email:</span>
             <a
               className="pp__link"
               href="mailto:themulberrypressurewashing@gmail.com"
@@ -167,6 +167,6 @@ export default function PrivacyPolicy() {
           </p>
         </footer>
       </section>
-    </main>
+    </article>
   );
 }

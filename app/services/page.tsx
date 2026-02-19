@@ -5,7 +5,7 @@ type Service = {
   title: string;
   description: string;
   icon?: "home" | "list" | "plus";
-  iconStyle?: React.CSSProperties;
+  iconModifier?: "sky" | "green";
 };
 
 const services: Service[] = [
@@ -28,13 +28,13 @@ const services: Service[] = [
     title: "Driveway Cleaning",
     description: "Remove stains, mildew, and years of buildup from concrete and pavers.",
     icon: "list",
-    iconStyle: { background: "#f0f9ff", borderColor: "#bae6fd", color: "#0284c7" },
+    iconModifier: "sky",
   },
   {
     title: "Gutter Cleaning",
     description: "Clear clogs and flush downspouts for proper, reliable drainage.",
     icon: "plus",
-    iconStyle: { background: "#f0fdf4", borderColor: "#bbf7d0", color: "#16a34a" },
+    iconModifier: "green",
   },
   {
     title: "Fence / Deck Cleaning",
@@ -101,15 +101,20 @@ export default function ServicesPage() {
 
       <section className="section-light">
         <div className="container">
-          <h2 className="fade-up">Services</h2>
-          <p className="section-subtitle fade-up">
-            Gentle on materials, tough on grime.
-          </p>
+          <div className="page-header">
+            <h2 className="fade-up">Services</h2>
+            <p className="section-subtitle fade-up">
+              Gentle on materials, tough on grime.
+            </p>
+          </div>
 
           <div className="grid grid-3">
             {services.map((s) => (
               <div key={s.title} className="card fade-up">
-                <div className="icon" style={s.iconStyle} aria-hidden="true">
+                <div
+                  className={`icon${s.iconModifier ? ` icon--${s.iconModifier}` : ""}`}
+                  aria-hidden="true"
+                >
                   <ServiceIcon variant={s.icon ?? "home"} />
                 </div>
                 <h3>{s.title}</h3>
@@ -118,7 +123,7 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          <div style={{ marginTop: "1.25rem", display: "flex", gap: "0.75rem" }}>
+          <div className="cta-row mt-lg">
             <Link href="/quote" className="btn btn-primary">
               Get a Free Quote
             </Link>

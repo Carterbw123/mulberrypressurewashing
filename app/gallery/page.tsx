@@ -7,6 +7,22 @@ import { ScrollReveal } from "../../components/ScrollReveal";
 
 const images: GalleryImage[] = [
   {
+    src: "/images/BlackGreyBrownBeautyHairBeforeAfterCollageInstagramPost10.png",
+    alt: "Before & After photo 10",
+  },
+  {
+    src: "/images/BlackGreyBrownBeautyHairBeforeAfterCollageInstagramPost92.png",
+    alt: "Before & After photo 92",
+  },
+  {
+    src: "/images/BlackGreyBrownBeautyHairBeforeAfterCollageInstagramPost82.png",
+    alt: "Before & After photo 82",
+  },
+  {
+    src: "/images/BlackGreyBrownBeautyHairBeforeAfterCollageInstagramPost72.png",
+    alt: "Before & After photo 72",
+  },
+  {
     src: "/images/BlackGreyBrownBeautyHairBeforeAfterCollageInstagramPost9.png",
     alt: "Before",
   },
@@ -31,11 +47,16 @@ export default function GalleryPage() {
 
       <section className="section-muted">
         <div className="container">
-          <h2 className="fade-up">Before &amp; After Gallery</h2>
+          <div className="page-header">
+            <h2 className="fade-up">Before &amp; After Gallery</h2>
+            <p className="section-subtitle fade-up">
+              See the difference our wash process makes.
+            </p>
+          </div>
 
           <LightboxGallery images={images} />
 
-          <div style={{ marginTop: "1.25rem" }}>
+          <div className="mt-lg">
             <Link href="/quote" className="btn btn-primary">
               Get a Free Quote
             </Link>

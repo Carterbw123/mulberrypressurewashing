@@ -1,5 +1,28 @@
 import Link from "next/link";
 import { ScrollReveal } from "../components/ScrollReveal";
+import {
+  LightboxGallery,
+  type GalleryImage,
+} from "../components/LightboxGallery";
+
+const homeGalleryImages: GalleryImage[] = [
+  {
+    src: "/images/BlackGreyBrownBeautyHairBeforeAfterCollageInstagramPost10.png",
+    alt: "Before & After photo 10",
+  },
+  {
+    src: "/images/BlackGreyBrownBeautyHairBeforeAfterCollageInstagramPost92.png",
+    alt: "Before & After photo 92",
+  },
+  {
+    src: "/images/BlackGreyBrownBeautyHairBeforeAfterCollageInstagramPost82.png",
+    alt: "Before & After photo 82",
+  },
+  {
+    src: "/images/BlackGreyBrownBeautyHairBeforeAfterCollageInstagramPost72.png",
+    alt: "Before & After photo 72",
+  },
+];
 
 export default function Home() {
   return (
@@ -14,7 +37,7 @@ export default function Home() {
               Safe soft washing + pressure washing for homes, driveways & more.
             </p>
 
-            <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+            <div className="cta-row">
               <a href="tel:7703310490" className="btn btn-primary">
                 Call Now
               </a>
@@ -79,8 +102,10 @@ export default function Home() {
 
       <section className="section-light">
         <div className="container">
-          <h2 className="fade-up">Our Services</h2>
-          <p className="section-subtitle fade-up">Gentle on materials, tough on grime.</p>
+          <div className="page-header">
+            <h2 className="fade-up">Our Services</h2>
+            <p className="section-subtitle fade-up">Gentle on materials, tough on grime.</p>
+          </div>
 
           <div className="grid grid-3">
             <div className="card fade-up">
@@ -132,11 +157,7 @@ export default function Home() {
             </div>
 
             <div className="card fade-up">
-              <div
-                className="icon"
-                aria-hidden="true"
-                style={{ background: "#f0f9ff", borderColor: "#bae6fd", color: "#0284c7" }}
-              >
+              <div className="icon icon--sky" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                   <path
                     d="M3 17h18M3 12h18M3 7h18"
@@ -151,11 +172,7 @@ export default function Home() {
             </div>
 
             <div className="card fade-up">
-              <div
-                className="icon"
-                aria-hidden="true"
-                style={{ background: "#f0fdf4", borderColor: "#bbf7d0", color: "#16a34a" }}
-              >
+              <div className="icon icon--green" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                   <path
                     d="M12 2v6m0 8v6m-6-6h12"
@@ -176,7 +193,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div style={{ marginTop: "1.25rem" }}>
+          <div className="mt-lg">
             <Link href="/services" className="btn btn-outline">
               View All Services
             </Link>
@@ -186,11 +203,14 @@ export default function Home() {
 
       <section className="section-muted">
         <div className="container">
-          <h2 className="fade-up">Before &amp; After Gallery</h2>
-          <p className="section-subtitle fade-up">
-            See the difference our wash process makes.
-          </p>
-          <div style={{ marginTop: "1rem" }}>
+          <div className="page-header">
+            <h2 className="fade-up">Before &amp; After Gallery</h2>
+            <p className="section-subtitle fade-up">
+              See the difference our wash process makes.
+            </p>
+          </div>
+          <LightboxGallery images={homeGalleryImages} />
+          <div className="mt-lg">
             <Link href="/gallery" className="btn btn-primary">
               View Gallery
             </Link>

@@ -8,7 +8,12 @@ export default function QuotePage() {
       <section className="section-light">
         <div className="container contact-grid">
           <div>
-            <h2 className="fade-up">Request a Free Quote</h2>
+            <div className="page-header">
+              <h2 className="fade-up">Request a Free Quote</h2>
+              <p className="section-subtitle fade-up">
+                Fill out the form and we&apos;ll get back to you quickly.
+              </p>
+            </div>
 
             {/* FormSubmit configuration:
                 Note: the first live submission triggers a one-time activation email from FormSubmit. */}
@@ -18,7 +23,7 @@ export default function QuotePage() {
               action="https://formsubmit.co/mawiziji@mailgolem.com"
               method="POST"
             >
-              <input type="text" name="_honey" style={{ display: "none" }} />
+              <input type="text" name="_honey" className="visually-hidden" aria-hidden="true" tabIndex={-1} />
               <input type="hidden" name="_captcha" value="false" />
               <input
                 type="hidden"
@@ -121,7 +126,7 @@ export default function QuotePage() {
               <strong>Email:</strong> themulberrypressurewashing@gmail.com
             </p>
             <p>Serving: Mulberry, Dacula, Braselton, Auburn, Buford</p>
-            <ul style={{ margin: "1rem 0 0 1.25rem", color: "#475569" }}>
+            <ul className="contact-benefits">
               <li>Fully insured</li>
               <li>Safe soft wash methods</li>
               <li>Transparent pricing, free quotes</li>

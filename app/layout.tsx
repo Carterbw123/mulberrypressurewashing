@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.variable}>
         <SiteHeader />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <SiteFooter />
       </body>
     </html>
