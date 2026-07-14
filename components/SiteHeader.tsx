@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import { useMemo, useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 
-const PHONE_TEL = "tel:7703310490";
-const PHONE_LABEL = "Call/Text: (770) 331-0490";
+const PHONE_TEL = "tel:6783501503";
+const PHONE_LABEL = "Call/Text: (678) 350-1503";
 
 function isActivePath(pathname: string, href: string) {
   if (href === "/") return pathname === "/";
