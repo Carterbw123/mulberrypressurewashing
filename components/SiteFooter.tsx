@@ -74,7 +74,7 @@ export function SiteFooter() {
         <div>
           <h4>Contact</h4>
           <div>
-            <a href="tel:7703310490">(770) 331-0490</a>
+            <a href="tel:6783501503">(678) 350-1503</a>
           </div>
           <div>
             <a href="mailto:themulberrypressurewashing@gmail.com">
