@@ -22,7 +22,7 @@ export default function QuotePage() {
           <div className="fade-up">
             <h3>Contact Info</h3>
             <p>
-              <strong>Call/Text:</strong> (770) 331-0490
+              <strong>Call/Text:</strong> (678) 350-1503
             </p>
             <p>
               <strong>Email:</strong> themulberrypressurewashing@gmail.com
