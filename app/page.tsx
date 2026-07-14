@@ -40,7 +40,7 @@ export default function Home() {
             </p>
 
             <div className="cta-row">
-              <a href="tel:7703310490" className="btn btn-primary">
+              <a href="tel:6783501503" className="btn btn-primary">
                 Call Now
               </a>
               <Link href="/quote" className="btn btn-outline">
@@ -49,7 +49,7 @@ export default function Home() {
             </div>
 
             <p className="fade-up">
-              Prefer to text? <strong>(770) 331-0490</strong>
+              Prefer to text? <strong>(678) 350-1503</strong>
             </p>
           </div>
         </div>
@@ -251,7 +251,7 @@ export default function Home() {
           <div className="fade-up">
             <h3>Contact Info</h3>
             <p>
-              <strong>Call/Text:</strong> (770) 331-0490
+              <strong>Call/Text:</strong> (678) 350-1503
             </p>
             <p>
               <strong>Email:</strong> themulberrypressurewashing@gmail.com
